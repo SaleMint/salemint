@@ -14,6 +14,8 @@ $config = require('config.php');
 $items = new Product;
 $cart = new Cart;
 
+
+
 if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     if (isset($_POST['product_id'])) {
         $id= $_POST['product_id'];

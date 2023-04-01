@@ -114,7 +114,8 @@
         error: function(xhr, status, error) {
             // Handle the error here
         }
-    });
+    }
+    );
 }
 
 </script>

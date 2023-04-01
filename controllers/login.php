@@ -1,6 +1,6 @@
 <?php
 
-$heading = 'jwt Test';
+$heading = 'Login';
 
 $config = require('config.php');
 
