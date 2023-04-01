@@ -88,7 +88,7 @@ function logIn($db, $config, &$errors,$cart)
             $errors['body'] = "credentials are incorrect";
         }
     }
-    $errors['body'] = "No such a user";
+    $errors['body'] = "User does not exist ";
 }
 
 require "views/login.php";

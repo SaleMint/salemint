@@ -13,9 +13,3 @@ function dd($value)
 function urlIs($value) {
     return $_SERVER['REQUEST_URI'] === $value;
 }
-
-function logout(){
-    session_destroy();
-    echo("test");
-    header('Location: http://localhost:8888/');
-}

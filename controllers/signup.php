@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                         'email' => $_POST['email'],
                         'password' =>password_hash( $_POST['password'],PASSWORD_BCRYPT)
                     ]);
-                    echo "<script> window.location.replace('notes') </script>";
+                    echo "<script> window.location.replace('login') </script>";
             } catch (PDOException $error) 
             {
                 print_r("error".$error->getMessage());
@@ -47,11 +47,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
    
 
 }
-
-// $data = ["zopr"=>"eldsoky","tez"=>"moamen"];
-
-// $JSON_data = json_encode($data);
-// print_r($JSON_data);
 
 
 require "views/signup.view.php";

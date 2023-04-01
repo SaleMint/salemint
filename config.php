@@ -2,13 +2,13 @@
 
 return [
     'database' => [
-        'host' => '127.0.0.1',
-        'port' => 3306,
-        'dbname' => 'myapp',
-        'charset' => 'utf8mb4'
+        'host' => $_ENV['DB_HOST'],
+        'port' => $_ENV['DB_PORT'],
+        'dbname' => $_ENV['DB_DATABASE'],
+        'charset' => 'utf8mb4',
     ],
 
-    'JWT_SECRET'=> 'bGS6lzFqvvSQ8ALbOxatm7/Vk7mLQyzqaS34Q4oR1ew='
+    'JWT_SECRET' => $_ENV['JWT_SECRET']
 
-    
+
 ];

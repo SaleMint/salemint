@@ -1,15 +1,15 @@
 <?php
-
 class Database
 {
+    
     public $connection;
 
-    public function __construct($config, $username = 'root', $password = 'Voda2828')
+    public function __construct($config)
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
         $this->connection = new 
-        PDO($dsn, $username, $password, [
+        PDO($dsn, $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
     }
