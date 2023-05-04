@@ -4,7 +4,6 @@ use \Firebase\JWT\JWT;
 use \Firebase\JWT\Key;
 
 
-require __DIR__ . '/../vendor/autoload.php';
 
 
 class AuthMiddleware{

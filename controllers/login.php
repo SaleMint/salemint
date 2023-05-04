@@ -4,7 +4,6 @@ $heading = 'Login';
 
 $config = require('config.php');
 
-require __DIR__ . '/../vendor/autoload.php';
 
 
 use \Firebase\JWT\JWT;
@@ -31,7 +30,7 @@ if (isset($_COOKIE['jwt'])) {
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // trigger if there's a POST request
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // check if there's a POST request
     $errors = [];
    
         logIn($db, $config,$errors,$cart);

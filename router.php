@@ -1,7 +1,7 @@
 <?php
 
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$path = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/index.php',
@@ -11,20 +11,17 @@ $routes = [
     '/login' => 'controllers/login.php',
     '/products' => "controllers/products.php",
     '/product' => "controllers/product.php"
-
-
-
 ];
 
 
-function routeToController($uri, $routes)
+function routeToController($path, $routes)
 {
-    if (array_key_exists($uri, $routes)) {
+    if (array_key_exists($path, $routes)) {
 
 
 
 
-        require $routes[$uri];
+        require $routes[$path];
     } else {
         abort();
     }
@@ -39,4 +36,4 @@ function abort($code = 404)
     die();
 }
 
-routeToController($uri, $routes);
+routeToController($path, $routes);
