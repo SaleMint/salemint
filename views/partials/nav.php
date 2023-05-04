@@ -75,18 +75,18 @@ if (isset($_COOKIE['jwt'])) {
 
             <div class="hidden md:block">
                 <div class=" <?= $user ?? "hidden" ?> ml-4 flex items-center md:ml-6">
-                  <?= $user? '<a href="/cart" type="button" class="  rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <?= $user ? '<a href="/cart" type="button" class="  rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span class="sr-only">View notifications</span>
                         <!-- Heroicon name: outline/bell -->
                         <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
                             <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" />
                         </svg>
 
-                    </a>':'' ?>
+                    </a>' : '' ?>
 
                     <!-- Profile dropdown -->
-                 
-                  <div class="relative ml-3">
+
+                    <div class="relative ml-3">
                         <div>
                             <button class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown"> <?= $user['name'] ?? " " ?> <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -147,9 +147,9 @@ if (isset($_COOKIE['jwt'])) {
                         <div class="text-base font-medium leading-none text-white"><?= $user['name'] ?? "" ?></div>
                         <div class="text-sm font-medium leading-none text-gray-400"><?= $user['email'] ?? "" ?></div>
                     </div>
-                  
+
                     <?= $user ?
-                  '  <a href="cart" type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        '  <a href="cart" type="button" class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span class="sr-only">View notifications</span>
                         <!-- Heroicon name: outline/bell -->
                         <svg class="flex-1 w-8 h-8 fill-current" viewbox="0 0 24 24">
@@ -159,10 +159,10 @@ if (isset($_COOKIE['jwt'])) {
 
                 </div>
                 <div class="mt-3 space-y-1 px-4">
-                    <a href="#" class="block rounded-md px-2 py-4 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"><?=$user?'Your profile':'About Us'?></a>
+                    <a href="#" class="block rounded-md px-2 py-4 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"><?= $user ? 'Your profile' : 'About Us' ?></a>
 
 
-                    <a href=<?=$user?'/logout':'/login' ?> class="block rounded-md px-2 py-4 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"><?=$user?'Sign out':'Sign in'?></a>
+                    <a href=<?= $user ? '/logout' : '/login' ?> class="block rounded-md px-2 py-4 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"><?= $user ? 'Sign out' : 'Sign in' ?></a>
                 </div>
             </div>
         </div>
